@@ -85,7 +85,7 @@ public class PDFView extends com.github.barteksc.pdfviewer.PDFView implements
 
     @Override
     public void onPageScrolled(int page, float positionOffset) {
-        if (lastPositionOffset != positionOffset && (positionOffset == 0 || positionOffset == 1)) {
+        if (lastPositionOffset != positionOffset) { // && (positionOffset == 0 || positionOffset == 1)) {
             // Only 0 and 1 are currently supported
             lastPositionOffset = positionOffset;
             WritableMap event = Arguments.createMap();

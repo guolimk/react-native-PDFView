@@ -44,8 +44,10 @@
               (scrollView.contentSize.height - scrollView.frame.size.height)){
         lastOffset = 1;
         [self reportOnScroll];
+    } else {
+        lastOffset = scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.frame.size.height);
+        [self reportOnScroll];
     }
-
 }
 
 - (void)reportOnScroll {
